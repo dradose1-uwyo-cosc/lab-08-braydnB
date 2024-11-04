@@ -107,16 +107,16 @@ def poscheck(valin):
 def quadsqrt(a,b,c):
     value = (b**2)-(4*a*c)
     if poscheck(value) == True:
-        value = value**.5
-        return value
+        newvalue = value**(1/2)
+        return newvalue
     else:
         return None
 answerlist = []
 def quadform(a,b,c):
     try:
         root = quadsqrt(a,b,c)
-        value1 = (-1*b)+(root)/(2*a)
-        value2 = (-1*b)-(root)/(2*a)
+        value1 = ((-b)+(root))/(2*a)
+        value2 = ((-b)-(root))/(2*a)
         answerlist.append(value1)
         answerlist.append(value2)
         print(answerlist)
