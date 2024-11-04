@@ -31,9 +31,11 @@ def stringcheck(intorfloat):
     if floatcheck(intorfloat) == True:
         intorfloat = round(float(intorfloat), 1)
         print(f"{intorfloat} is a {type(intorfloat)} value.")
+        return intorfloat
     elif intcheck(intorfloat) == True:
         intorfloat = int(intorfloat)
         print (f"{intorfloat} is a {type(intorfloat)} value.")
+        return intorfloat
     else:
         print("This string cannot be turned into float or integer type.")
 
